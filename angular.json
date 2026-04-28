@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mynewapp": {
+    "book-list": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/mynewapp",
+            "outputPath": "dist/book-list",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "mynewapp:build:production"
+              "buildTarget": "book-list:build:production"
             },
             "development": {
-              "buildTarget": "mynewapp:build:development"
+              "buildTarget": "book-list:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "mynewapp:build"
+            "buildTarget": "book-list:build"
           }
         },
         "test": {
@@ -106,7 +106,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           }
